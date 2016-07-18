@@ -1,0 +1,28 @@
+{
+  "name": "cartridger",
+  "version": "0.1.0",
+  "description": "Custom cartridge generator for DCS World A-10C.",
+  "main": "cartridger.js",
+  "dependencies": {
+    "app-root-path": "^1.0.0",
+    "colors": "^1.1.2",
+    "debug": "^2.2.0",
+    "express": "^4.13.3",
+    "fs-extra": "^0.26.2",
+    "morgan": "^1.6.1",
+    "nib": "^1.1.0",
+    "object-merge": "^2.5.1",
+    "pug": "^2.0.0-beta4",
+    "serve-favicon": "^2.3.0",
+    "stylus": "^0.52.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "SET DEBUG=cartridger:* & nodemon bin/primer.js",
+    "start": "SET DEBUG= & nodemon bin/primer.js",
+    "deliver": "node bin/deliver.js"
+  },
+  "author": "Mattia Affabris <affa@outlook.it> (https://github.com/Gliptal/)",
+  "license": "CC BY-SA 4.0",
+  "private": true
+}

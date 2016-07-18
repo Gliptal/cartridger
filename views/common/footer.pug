@@ -1,0 +1,7 @@
+include /views/common/switch.pug
+
+footer
+    #footer_meta
+        h6!= footer.text.meta
+    +switch("footer_switch", footer.switch.download.left, footer.switch.download.right)
+    press#footer_download!= footer.button.download

@@ -1,0 +1,21 @@
+@import "gui"
+
+tab
+    display       : inline-block
+    height        : 48px
+    line-height   : 45px
+    border-bottom : 3px solid color_accent-normal
+    font-size     : 18px
+    font-weight   : 400
+    text-align    : center
+    text-transform: uppercase
+    cursor        : pointer
+    transition    : border-color time_fast
+    &:hover
+        border-color: color_accent-dark
+    &.selected
+        border-color: color_accent-light
+        cursor      : default
+    &.inactive
+        border-color: transparent
+        cursor      : default

@@ -1,0 +1,14 @@
+doctype html
+html
+    head
+        include /views/common/head.pug
+        include /views/common/imports/css.pug
+        block css
+        include /views/common/imports/js.pug
+        block js
+    body
+        include /views/common/background.pug
+        include /views/common/header.pug
+        #content
+            block content
+        include /views/common/footer.pug

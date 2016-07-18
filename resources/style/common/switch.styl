@@ -1,0 +1,29 @@
+@import "gui"
+
+switch
+    display         : inline-block
+    height          : 24px
+    width           : 120px
+    line-height     : 24px
+    background-color: color_accent-normal
+    & #cover
+        absolute        : right
+        height          : 100%
+        width           : 50%
+        background-color: color_accent-light
+        cursor          : pointer
+        transition      : background-color time_fast, right time_fast
+        &:hover
+            background-color: color_accent-dark
+        &.right
+            right: 0px
+        &.left
+            right: 50%
+    & .side
+        display       : inline-block
+        height        : 100%
+        width         : 60px
+        font-size     : 12px
+        font-weight   : 400
+        text-align    : center
+        text-transform: uppercase

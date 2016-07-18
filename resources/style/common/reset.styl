@@ -1,0 +1,69 @@
+@import "gui"
+
+global-reset()
+
+*
+    box-sizing      : inherit
+    text-size-adjust: 100%
+    text-rendering  : optimizeLegibility
+    font-smoothing  : grayscale
+    cursor          : default
+    user-select     : none
+    &:before
+    &:after
+        box-sizing: inherit
+
+::-webkit-scrollbar
+    width           : 12px
+    background-color: color_main-dark
+
+::-webkit-scrollbar-thumb
+    background-color: color_accent-light
+
+html
+    height     : 100%
+    min-height : 100%
+    box-sizing : border-box
+
+body
+    height     : "calc(100% - %s)" % (header_height + footer_height)
+    margin-top : header_height
+    font       : 0 "Open Sans", sans-serif
+    font-weight: font_weight-light
+    color      : font_color-light
+    & #content
+        min-height: 100%
+
+p
+    line-height: font_size-normal + 6px
+    font-size  : font_size-normal
+    text-align : justify
+    a
+        text-decoration: underline
+
+h1
+    font-size     : font_size-large
+    font-weight   : font_weight-heavy
+    text-transform: uppercase
+
+h6
+    line-height: font_size-small + 6px
+    font-size  : font_size-small
+
+a
+    color          : font_color-light
+    text-decoration: initial
+    cursor         : pointer
+    transition     : color time_fast
+    &:hover
+        color: font_color-medium
+
+strong
+    font-weight: bold
+    color      : color_accent-light
+
+.hidden
+    opacity: 0
+
+
+

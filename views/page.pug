@@ -1,0 +1,11 @@
+extends /views/common/layout.pug
+
+block css
+    link(rel="stylesheet" href="/style/cmsc.css")
+
+block js
+    script(type="text/javascript" src="/javascripts/page.js" defer)
+    script(type="text/javascript" src="/javascripts/cmsc.js" defer)
+
+block content
+    include /views/cmsc.pug
