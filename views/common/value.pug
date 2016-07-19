@@ -1,0 +1,7 @@
+mixin value(name, label, text, pattern, enabled)
+    value(class=name)
+        p!= label
+        if enabled
+            input(class=pattern value=text)
+        else
+            input(class=pattern value=text disabled)

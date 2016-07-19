@@ -1,2 +1,5 @@
-new Header()
-new Footer()
+Header = new Header()
+Footer = new Footer()
+Sidebar = new Sidebar()
+Cmsc = new Cmsc()
+Mfcds = new Mfcds()

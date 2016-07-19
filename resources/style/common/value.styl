@@ -1,0 +1,28 @@
+@import "gui"
+
+value
+    display      : inline-block
+    height       : 30px
+    width        : 180px
+    margin-bottom: 6px
+    & > *
+        display       : inline-block
+        vertical-align: top
+        height        : 100%
+    & p
+        width        : 120px
+        padding-right: 24px
+        text-align   : right
+    & input
+        width           : 60px
+        border          : 0px
+        padding         : 0px 6px
+        font-size       : font_size-normal
+        text-align      : center
+        line-height     : 24px
+        text-transform  : uppercase
+        color           : font_color-light
+        background-color: color_accent-light
+        cursor          : auto
+        &:disabled
+            background-color: color_accent-normal

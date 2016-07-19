@@ -3,5 +3,6 @@ include /views/common/switch.pug
 footer
     #footer_meta
         h6!= footer.text.meta
-    +switch("footer_switch", footer.switch.download.left, footer.switch.download.right)
-    press#footer_download!= footer.button.download
+    .hidden#footer_download
+        +switch("footer_download-switch", footer.switch.download.left, footer.switch.download.right)
+        press.interactable#footer_download-button

@@ -9,13 +9,13 @@ Footer.prototype.__setUpdateDate = function()
     $.getJSON("https://api.github.com/repos/Gliptal/cartridger", function(data)
         {
         var date = $.format.date(data.pushed_at, "D MMMM yyyy")
-        $("#footer_meta").append("<a href=\"https://github.com/Gliptal/cartridger\" target=\"_blank\">" + date + "</a>")
+        $("#footer_meta h6").append("<a href=\"https://github.com/Gliptal/cartridger\" target=\"_blank\">" + date + "</a>")
         })
     }
 
 Footer.prototype.__subscribeToggle = function()
     {
-    cover = $("#footer_switch #cover")
+    cover = $("#footer_download-switch #cover")
 
     cover.click(function()
         {

@@ -14,11 +14,15 @@ global-reset()
         box-sizing: inherit
 
 ::-webkit-scrollbar
-    width           : 12px
+    height          : 6px
+    width           : 6px
     background-color: color_main-dark
 
 ::-webkit-scrollbar-thumb
     background-color: color_accent-light
+    &:hover
+        background-color: color_accent-dark
+
 
 html
     height     : 100%
@@ -31,8 +35,15 @@ body
     font       : 0 "Open Sans", sans-serif
     font-weight: font_weight-light
     color      : font_color-light
+    overflow-x : hidden
     & #content
         min-height: 100%
+
+input
+    font-family: inherit;
+    &:focus
+    &:focus
+        outline: 0
 
 p
     line-height: font_size-normal + 6px
@@ -42,9 +53,9 @@ p
         text-decoration: underline
 
 h1
-    font-size     : font_size-large
-    font-weight   : font_weight-heavy
-    text-transform: uppercase
+    font-size  : font_size-normal
+    font-weight: font_weight-heavy
+    color      : color_accent-light
 
 h6
     line-height: font_size-small + 6px
@@ -58,12 +69,16 @@ a
     &:hover
         color: font_color-medium
 
-strong
-    font-weight: bold
-    color      : color_accent-light
-
 .hidden
-    opacity: 0
+    opacity       : 0
+    pointer-events:none
+
+.interactable
+    background-color: color_accent-light
+    cursor          : pointer
+    transition      : all time_fast
+    &:hover
+        background-color: color_accent-dark
 
 
 

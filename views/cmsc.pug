@@ -1,0 +1,14 @@
+include /views/common/value.pug
+
+#cmsc
+    h1!= cmsc.text.defaultTitle
+    .cmsc_list#cmsc_list-default
+        each program in cmsc.data.programs
+            .cmsc_program
+                +value("cmsc_program-letter", "letter", program.letter, "regex_AM", false)
+                +value("cmsc_program-chaff", "chaff", program.chaff, "regex_int", true)
+                +value("cmsc_program-flare", "flare", program.flare, "regex_int", true)
+                +value("cmsc_program-interval", "interval", program.interval, "regex_float", true)
+                +value("cmsc_program-repeat", "repeat", program.repeat, "regex_float", true)
+    h1!= cmsc.text.customTitle
+    .cmsc_list#cmsc_list-custom

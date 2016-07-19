@@ -18,6 +18,7 @@ PLUGINS
 
 - [jQuery](https://jquery.com/)
 - [jQuery dateFormat](https://github.com/phstc/jquery-dateFormat)
+- [jQuery Thimble Filtering](http://www.thimbleopensource.com/tutorials-snippets/jquery-plugin-filter-text-input)
 
 CONTACTS
 ======
@@ -41,3 +42,8 @@ Versioning follows [semantic versioning](http://semver.org/) rules.
 ### 0.1.0
 
 - initial skeleton
+
+### 0.2.0
+
+- navigation skeleton
+- cmsc skeleton
