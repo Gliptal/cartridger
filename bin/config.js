@@ -2,9 +2,9 @@ var nib    = require("nib")
 var pather = require("path")
 var stylus = require("stylus")
 
-var debugServer  = require("debug")("maple:server")
-var debugStylus  = require("debug")("maple:stylus")
-var debugRouting = require("debug")("maple:routing")
+var debugServer  = require("debug")("cartridger:server")
+var debugStylus  = require("debug")("cartridger:stylus")
+var debugRouting = require("debug")("cartridger:routing")
 
 // // //
 

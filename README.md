@@ -54,4 +54,10 @@ Versioning follows [semantic versioning](http://semver.org/) rules.
 
 ### 0.4.0
 
+- cmsc behaviour
 - mfcds interface
+
+### 0.5.0
+
+- framework fix
+- mfcds behaviour

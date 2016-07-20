@@ -13,8 +13,10 @@
         div
             each page, index in mfcds.data.pages
                 if (index < 4)
-                    press.interactable!= page
+                    press!= page
         div
             each page, index in mfcds.data.pages
                 if (index >= 4)
-                    press.interactable!= page
+                    press!= page
+        div
+            press#mfcds_pages-remove

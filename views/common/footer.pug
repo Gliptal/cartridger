@@ -2,7 +2,9 @@ include /views/common/switch.pug
 
 footer
     #footer_meta
-        h6!= footer.text.meta
+        h6!= footer.text.feedback
+        h6!= footer.text.repo
+        h6!= footer.text.credit
     .hidden#footer_download
         +switch("footer_download-switch", footer.switch.download.left, footer.switch.download.right)
         press.interactable#footer_download-button
