@@ -1,3 +1,4 @@
+Options = new Options()
 Header = new Header()
 Footer = new Footer()
 Sidebar = new Sidebar()

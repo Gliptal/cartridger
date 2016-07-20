@@ -8,3 +8,7 @@ Versioning follows [Semantic versioning](http://semver.org/) rules.
 
 - navigation skeleton
 - cmsc skeleton
+
+### 0.3.0
+
+- cmsc interface
