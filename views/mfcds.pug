@@ -1,1 +1,20 @@
 #mfcds
+    .mfcds_links
+        h1!= mfcds.text.leftTitle
+        div
+            each page in mfcds.data.default.left
+                press.interactable!= page
+    .mfcds_links
+        h1!= mfcds.text.rightTitle
+        div
+            each page in mfcds.data.default.right
+                press.interactable!= page
+    #mfcds_pages
+        div
+            each page, index in mfcds.data.pages
+                if (index < 4)
+                    press.interactable!= page
+        div
+            each page, index in mfcds.data.pages
+                if (index >= 4)
+                    press.interactable!= page

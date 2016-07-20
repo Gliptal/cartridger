@@ -12,3 +12,7 @@ Versioning follows [Semantic versioning](http://semver.org/) rules.
 ### 0.3.0
 
 - cmsc interface
+
+### 0.4.0
+
+- mfcds interface
