@@ -27,3 +27,7 @@ Versioning follows [Semantic versioning](http://semver.org/) rules.
 
 - tad interface
 - tad behaviour
+
+### 0.7.0
+
+- download skeleton

@@ -1,7 +1,7 @@
 CARTRIDGER
 ======
 
-Generate a custom cartridge for the [A-10C](http://www.digitalcombatsimulator.com/en/products/planes/warthog/) in [DCS World](http://www.digitalcombatsimulator.com/en/), using a simple web interface. Download the cartridge either as a [JSGME](http://www.subsim.com/radioroom/showthread.php?t=171237) ready mod, or as a separate package with installation instructions.
+Generate a custom cartridge for the [A-10C](http://www.digitalcombatsimulator.com/en/products/planes/warthog/) in [DCS World](http://www.digitalcombatsimulator.com/en/), using a simple web interface. Download the cartridge either as a [JSGME](http://forums.eagle.ru/showthread.php?t=98607) ready mod, or as a separate package with installation instructions.
 
 FRAMEWORK
 ======
@@ -19,6 +19,8 @@ PLUGINS
 - [jQuery](https://jquery.com/)
 - [jQuery dateFormat](https://github.com/phstc/jquery-dateFormat)
 - [jQuery Thimble Filtering](http://www.thimbleopensource.com/tutorials-snippets/jquery-plugin-filter-text-input)
+- [JSZip](https://stuk.github.io/jszip/)
+- [FileSaver.js](https://eligrey.com/blog/post/saving-generated-files-on-the-client-side)
 
 CHANGELOG
 ======
@@ -52,6 +54,10 @@ Versioning follows [semantic versioning](http://semver.org/) rules.
 
 - tad interface
 - tad behaviour
+
+### 0.7.0
+
+- download skeleton
 
 CONTACTS
 ======
