@@ -31,3 +31,8 @@ Versioning follows [Semantic versioning](http://semver.org/) rules.
 ### 0.7.0
 
 - download skeleton
+
+### 0.8.0
+
+- cmsc download
+- mfcds download

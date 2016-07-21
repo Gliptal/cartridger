@@ -59,6 +59,11 @@ Versioning follows [semantic versioning](http://semver.org/) rules.
 
 - download skeleton
 
+### 0.8.0
+
+- cmsc download
+- mfcds download
+
 CONTACTS
 ======
 

@@ -1,10 +1,10 @@
 #mfcds
-    .mfcds_links
+    .mfcds_links#mfcds_links-left
         h1!= mfcds.text.leftTitle
         div
             each page in mfcds.data.default.left
                 press.interactable!= page
-    .mfcds_links
+    .mfcds_links#mfcds_links-right
         h1!= mfcds.text.rightTitle
         div
             each page in mfcds.data.default.right

@@ -1,4 +1,5 @@
 Options = new Options()
+Parser = new Parser()
 Header = new Header()
 Footer = new Footer()
 Sidebar = new Sidebar()

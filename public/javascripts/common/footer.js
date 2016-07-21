@@ -28,9 +28,10 @@ Footer.prototype.__subscribeDownload = function()
         {
         zip = new JSZip()
 
-        cmscFile = ""
-        rightMfcdFile = ""
-        leftMfcdFile = ""
+        instructionsFile = ""
+        cmscFile = Parser.runCmsc()
+        leftMfcdFile = Parser.runLeftMfcd()
+        rightMfcdFile = Parser.runRightMfcd()
         tadFile = ""
         iffccFile = ""
 
@@ -50,7 +51,7 @@ Footer.prototype.__subscribeDownload = function()
             }
         else
             {
-            zip.file("instructions.txt", "test\n")
+            zip.file("instructions.txt", instructionsFile)
             zip.file("AN_ALE40V_params.lua", cmscFile)
             zip.file("MFCD_left_param.lua", leftMfcdFile)
             zip.file("MFCD_right_param.lua", rightMfcdFile)
