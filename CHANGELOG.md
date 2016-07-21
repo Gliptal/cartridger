@@ -22,3 +22,8 @@ Versioning follows [Semantic versioning](http://semver.org/) rules.
 
 - framework fix
 - mfcds behaviour
+
+### 0.6.0
+
+- tad interface
+- tad behaviour

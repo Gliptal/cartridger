@@ -1,0 +1,35 @@
+@import "common\gui"
+
+#tad
+    vertical-align: top
+
+.tad-profile
+    display   : inline-block
+    relative  : top left
+    height    : 100%
+    width     : 25%
+    margin-top: 60px
+    & value
+        width        : 100%
+        text-align   : center
+        margin-bottom: 48px
+        & p
+            width  : 0px
+            padding: 0px
+        & input
+            width: 96px
+    & div:not(value)
+        text-align   : center
+        margin-bottom: 12px
+        transition   : all time_fast
+        &.inactive
+            opacity       : 0.5
+            pointer-events:none
+        & p
+            display       : inline-block
+            vertical-align: top
+            width         : 120px
+            text-align    : right
+            padding-right : 24px
+        & switch
+            position: relative

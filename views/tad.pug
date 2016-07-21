@@ -1,0 +1,64 @@
+include /views/common/value.pug
+include /views/common/switch.pug
+
+#tad
+    each profile in tad.data.profiles
+        .tad-profile
+            +value("", "", profile.name, "regex_AM4", true)
+            div.tad_switch-bullseye
+                p!= tad.text.profile[0]
+                if (profile.bullseye)
+                    +switch("", tad.switch.boolean.left, tad.switch.boolean.right, "r")
+                else
+                    +switch("", tad.switch.boolean.left, tad.switch.boolean.right, "l")
+            div.tad_switch-rings
+                p!= tad.text.profile[1]
+                if (profile.rings)
+                    +switch("", tad.switch.boolean.left, tad.switch.boolean.right, "r")
+                else
+                    +switch("", tad.switch.boolean.left, tad.switch.boolean.right, "l")
+            div.tad_switch-flightPlan
+                p!= tad.text.profile[2]
+                if (profile.flightPlan)
+                    +switch("", tad.switch.boolean.left, tad.switch.boolean.right, "r")
+                else
+                    +switch("", tad.switch.boolean.left, tad.switch.boolean.right, "l")
+            div.tad_switch-waypoints
+                p!= tad.text.profile[3]
+                if (profile.waypoints)
+                    +switch("", tad.switch.boolean.left, tad.switch.boolean.right, "r")
+                else
+                    +switch("", tad.switch.boolean.left, tad.switch.boolean.right, "l")
+            div.tad_switch-hook
+                p!= tad.text.profile[4]
+                if (profile.hook != 0)
+                    +switch("", tad.switch.boolean.left, tad.switch.boolean.right, "r")
+                else
+                    +switch("", tad.switch.boolean.left, tad.switch.boolean.right, "l")
+            if (profile.hook == 0)
+                div.inactive.tad_switch-hook-type
+                    p!= tad.text.profile[5]
+                    if (profile.hook != 2)
+                        +switch("", tad.switch.spi.left, tad.switch.spi.right, "r")
+                    else
+                        +switch("", tad.switch.spi.left, tad.switch.spi.right, "l")
+            else
+                div.tad_switch-hook-type
+                    p!= tad.text.profile[5]
+                    if (profile.hook != 2)
+                        +switch("", tad.switch.spi.left, tad.switch.spi.right, "r")
+                    else
+                        +switch("", tad.switch.spi.left, tad.switch.spi.right, "l")
+            div.tad_switch-ownship
+                p!= tad.text.profile[6]
+                if (profile.ownship)
+                    +switch("", tad.switch.ownship.left, tad.switch.ownship.right, "r")
+                else
+                    +switch("", tad.switch.ownship.left, tad.switch.ownship.right, "l")
+            div.tad_switch-spi
+                p!= tad.text.profile[7]
+                if (profile.spi)
+                    +switch("", tad.switch.boolean.left, tad.switch.boolean.right, "r")
+                else
+                    +switch("", tad.switch.boolean.left, tad.switch.boolean.right, "l")
+

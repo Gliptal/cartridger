@@ -51,6 +51,7 @@ Header.prototype.selectTab = function(tab)
             break
         case 3:
             $("tab:nth-of-type(3)").addClass("selected")
+            Tad.slideIn()
             break
         case 4:
             $("tab:nth-of-type(4)").addClass("selected")

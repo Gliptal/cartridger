@@ -6,5 +6,5 @@ footer
         h6!= footer.text.repo
         h6!= footer.text.credit
     .hidden#footer_download
-        +switch("footer_download-switch", footer.switch.download.left, footer.switch.download.right)
+        +switch("footer_download-switch", footer.switch.download.left, footer.switch.download.right, "r")
         press.interactable#footer_download-button

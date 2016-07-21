@@ -5,11 +5,11 @@ include /views/common/value.pug
     .cmsc_list#cmsc_list-default
         each program in cmsc.data.programs
             .cmsc_program
-                +value("cmsc_program-letter", "letter", program.letter, "regex_AM", false)
-                +value("cmsc_program-chaff", "chaff", program.chaff, "regex_int", true)
-                +value("cmsc_program-flare", "flare", program.flare, "regex_int", true)
-                +value("cmsc_program-interval", "interval", program.interval, "regex_float", true)
-                +value("cmsc_program-repeat", "repeat", program.repeat, "regex_float", true)
+                +value("cmsc_program-letter", cmsc.text.program[0], program.letter, "regex_AM", false)
+                +value("cmsc_program-chaff", cmsc.text.program[1], program.chaff, "regex_int", true)
+                +value("cmsc_program-flare", cmsc.text.program[2], program.flare, "regex_int", true)
+                +value("cmsc_program-interval", cmsc.text.program[3], program.interval, "regex_float", true)
+                +value("cmsc_program-repeat", cmsc.text.program[4], program.repeat, "regex_float", true)
     h1!= cmsc.text.customTitle
     .cmsc_list#cmsc_list-custom
         press.interactable#cmsc_program-add

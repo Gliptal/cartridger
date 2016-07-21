@@ -7,7 +7,8 @@ var header  = require(rootDir + "locales/" + config.lang + "/common/header")
 var footer  = require(rootDir + "locales/" + config.lang + "/common/footer")
 var cmsc    = require(rootDir + "locales/" + config.lang + "/cmsc")
 var mfcds   = require(rootDir + "locales/" + config.lang + "/mfcds")
-var content = merge(meta, header, footer, cmsc, mfcds)
+var tad     = require(rootDir + "locales/" + config.lang + "/tad")
+var content = merge(meta, header, footer, cmsc, mfcds, tad)
 
 // // //
 

@@ -5,7 +5,12 @@ var cmsc =
         text :
             {
             defaultTitle : "default",
-            customTitle  : "custom"
+            customTitle  : "custom",
+            program      : ["program",
+                            "chaff",
+                            "flare",
+                            "interval",
+                            "repeat"]
             },
         data :
             {

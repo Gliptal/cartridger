@@ -3,13 +3,16 @@ extends /views/common/layout.pug
 block css
     link(rel="stylesheet" href="/style/cmsc.css")
     link(rel="stylesheet" href="/style/mfcds.css")
+    link(rel="stylesheet" href="/style/tad.css")
     link(rel="stylesheet" href="/style/page.css")
 
 block js
     script(type="text/javascript" src="/javascripts/cmsc.js" defer)
     script(type="text/javascript" src="/javascripts/mfcds.js" defer)
+    script(type="text/javascript" src="/javascripts/tad.js" defer)
     script(type="text/javascript" src="/javascripts/page.js" defer)
 
 block content
     include /views/cmsc.pug
     include /views/mfcds.pug
+    include /views/tad.pug

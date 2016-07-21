@@ -13,7 +13,10 @@ Mfcds.prototype.__subscribeLinks = function(links)
         current = []
         links.each(function()
             {
-            current.push($(this).text())
+            text = $(this).text()
+
+            if (text !== "")
+                current.push(text)
             })
 
         $("#mfcds_pages press").each(function()

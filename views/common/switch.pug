@@ -1,5 +1,8 @@
-mixin switch(id, left, right)
+mixin switch(id, left, right, side)
     switch(id=id)
-        .interactable.right#cover
+        if (side == "r")
+            .cover.interactable.right
+        else if (side == "l")
+            .cover.interactable.left
         .side!= left
         .side!= right

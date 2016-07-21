@@ -20,20 +20,6 @@ PLUGINS
 - [jQuery dateFormat](https://github.com/phstc/jquery-dateFormat)
 - [jQuery Thimble Filtering](http://www.thimbleopensource.com/tutorials-snippets/jquery-plugin-filter-text-input)
 
-CONTACTS
-======
-
-- [Mattia Affabris](https://github.com/Gliptal)
-
-LICENSE
-======
-
-[![license](https://i.creativecommons.org/l/by-sa/4.0/80x15.png)](http://creativecommons.org/licenses/by-sa/4.0/)
-
-Cartridger by [Mattia Affabris](mailto:affa@outlook.it) is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
-
-Based on a work at [https://github.com/Gliptal/cartridger](https://github.com/Gliptal/cartridger).
-
 CHANGELOG
 ======
 
@@ -61,3 +47,22 @@ Versioning follows [semantic versioning](http://semver.org/) rules.
 
 - framework fix
 - mfcds behaviour
+
+### 0.6.0
+
+- tad interface
+- tad behaviour
+
+CONTACTS
+======
+
+- [Mattia Affabris](https://github.com/Gliptal)
+
+LICENSE
+======
+
+[![license](https://i.creativecommons.org/l/by-sa/4.0/80x15.png)](http://creativecommons.org/licenses/by-sa/4.0/)
+
+Cartridger by [Mattia Affabris](mailto:affa@outlook.it) is licensed under a [Creative Commons Attribution-ShareAlike 4.0 International License](http://creativecommons.org/licenses/by-sa/4.0/).
+
+Based on a work at [https://github.com/Gliptal/cartridger](https://github.com/Gliptal/cartridger).
