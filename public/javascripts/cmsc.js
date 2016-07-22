@@ -17,7 +17,7 @@ Cmsc.prototype.__subscribeCustomAdder = function()
 
         if (Cmsc.programs <= 13)
             {
-            adder.before("<div class=\"cmsc_program\"><press class=\"cmsc_program-remove interactable\"></press><value class=\"cmsc_program-letter\"><p>program</p><input class=\"regex_NZ\"></value><value class=\"cmsc_program-chaff\"><p>chaff</p><input class=\"regex_int\"></value><value class=\"cmsc_program-flare\"><p>flare</p><input class=\"regex_int\"></value><value class=\"cmsc_program-interval\"><p>interval</p><input class=\"regex_float\"></value><value class=\"cmsc_program-repeat\"><p>repeat</p><input class=\"regex_float\"></value></div>")
+            adder.before("<div class=\"cmsc_program\"><press class=\"cmsc_program-remove interactable\"></press><value class=\"cmsc_program-letter\"><p>program</p><input class=\"regex_NZ\"></value><value class=\"cmsc_program-chaff\"><p>chaff</p><input class=\"regex_int2\"></value><value class=\"cmsc_program-flare\"><p>flare</p><input class=\"regex_int2\"></value><value class=\"cmsc_program-interval\"><p>interval</p><input class=\"regex_float\"></value><value class=\"cmsc_program-repeat\"><p>repeat</p><input class=\"regex_float\"></value></div>")
 
             self.__subscribeCustomRemover(list.children(".cmsc_program").last().children("press"))
             Options.filterInputs()

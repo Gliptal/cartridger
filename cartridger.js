@@ -4,7 +4,7 @@ var logger  = require("morgan")
 var stylus  = require("stylus")
 var config  = require(rootDir + "bin/config")
 
-var page = require(rootDir + "routes/page")
+var cartridger = require(rootDir + "routes/cartridger")
 
 // // //
 
@@ -33,7 +33,7 @@ var configurator =
 
     configureRoutes: function()
         {
-        this.site.use("/", page)
+        this.site.use("/", cartridger)
         }
     }
 

@@ -72,6 +72,13 @@ Versioning follows [semantic versioning](http://semver.org/) rules.
 
 - look and feel
 
+### 1.0.0
+
+- iffcc interface
+- iffcc behaviour
+- iffcc download
+- deliver script fix
+
 CONTACTS
 ======
 

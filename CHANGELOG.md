@@ -44,3 +44,10 @@ Versioning follows [Semantic versioning](http://semver.org/) rules.
 ### 0.10.0
 
 - look and feel
+
+### 1.0.0
+
+- iffcc interface
+- iffcc behaviour
+- iffcc download
+- deliver script fix

@@ -18,11 +18,6 @@ function success(output)
     return "[    OK    ]".green + "    " + output
     }
 
-function filterJs(value)
-    {
-    return value.indexOf(".js") > -1
-    }
-
 function deliverImages()
     {
     fs.remove(destination + "/images", function(error)
@@ -91,31 +86,24 @@ function deliverStylesheets()
 
 function deliverHtml()
     {
-    fs.readdir("locales/en/", function(error, files)
+    var meta    = require("../locales/en/common/meta")
+    var header  = require("../locales/en/common/header")
+    var footer  = require("../locales/en/common/footer")
+    var cmsc    = require("../locales/en/cmsc")
+    var iffcc   = require("../locales/en/iffcc")
+    var mfcds   = require("../locales/en/mfcds")
+    var tad     = require("../locales/en/tad")
+    var content = merge(meta, header, footer, cmsc, iffcc, mfcds, tad)
+
+    var render = pug.compileFile("./views/cartridger.pug", {basedir: "./", pretty: true})
+    var html = render(content)
+
+    fs.writeFile(destination + "/cartridger.html", html, function(error)
         {
-        files = files.filter(filterJs)
-
-        files.forEach(function(page)
-            {
-            page = page.slice(0, -3)
-
-            var meta    = require("../locales/en/common/meta")
-            var header  = require("../locales/en/common/header")
-            var footer  = require("../locales/en/common/footer")
-            var locale  = require("../locales/en/" + page)
-            var content = merge(meta, header, footer, locale)
-
-            var render = pug.compileFile("./views/" + page + ".pug", {basedir: "./", pretty: true})
-            var html = render(content)
-
-            fs.writeFile(destination + "/" + page + ".html", html, function(error)
-                {
-                if (error)
-                    console.log(fail("compile " + page + ".html page\n" + error))
-                else
-                    console.log(success("compile " + page + ".html page"))
-                })
-            })
+        if (error)
+            console.log(fail("compile cartridger.html\n" + error))
+        else
+            console.log(success("compile cartridger.html"))
         })
     }
 

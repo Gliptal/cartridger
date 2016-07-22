@@ -28,12 +28,12 @@ Footer.prototype.__subscribeDownload = function()
         {
         zip = new JSZip()
 
-        instructionsFile = ""
+        instructionsFile = Parser.runInstructions()
         cmscFile = Parser.runCmsc()
         leftMfcdFile = Parser.runLeftMfcd()
         rightMfcdFile = Parser.runRightMfcd()
         tadFile = Parser.runTad()
-        iffccFile = ""
+        iffccFile = Parser.runIffcc()
 
         if ($("#footer_download-switch .cover").hasClass("right"))
             {

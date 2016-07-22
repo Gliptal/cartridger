@@ -1,0 +1,15 @@
+include /views/common/value.pug
+include /views/common/switch.pug
+
+#iffcc
+    #iffcc_list
+        each profile in iffcc.data.profiles
+            .iffcc_profile
+                +value("iffcc_program-name", iffcc.text.profile[0], profile.name, "regex_9", true)
+                +value("iffcc_program-wingspan", iffcc.text.profile[1], profile.wingspan, "regex_int2", true)
+                +value("iffcc_program-length", iffcc.text.profile[2], profile.length, "regex_int2", true)
+                +value("iffcc_program-speed", iffcc.text.profile[3], profile.speed, "regex_int3", true)
+                if (profile.selected)
+                    +switch("iffcc_program-selected", iffcc.switch.selected.left, iffcc.switch.selected.right, "r")
+                else
+                    +switch("iffcc_program-selected", iffcc.switch.selected.left, iffcc.switch.selected.right, "l")

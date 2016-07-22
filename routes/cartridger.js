@@ -8,7 +8,8 @@ var footer  = require(rootDir + "locales/" + config.lang + "/common/footer")
 var cmsc    = require(rootDir + "locales/" + config.lang + "/cmsc")
 var mfcds   = require(rootDir + "locales/" + config.lang + "/mfcds")
 var tad     = require(rootDir + "locales/" + config.lang + "/tad")
-var content = merge(meta, header, footer, cmsc, mfcds, tad)
+var iffcc   = require(rootDir + "locales/" + config.lang + "/iffcc")
+var content = merge(meta, header, footer, cmsc, mfcds, tad, iffcc)
 
 // // //
 
@@ -18,7 +19,7 @@ router.get("/", function(req, res, next)
     {
     config.debug.routing("GET request -> /")
 
-    res.render("page", content)
+    res.render("cartridger", content)
     })
 
 // // //
