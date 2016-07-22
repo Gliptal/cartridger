@@ -64,6 +64,10 @@ Versioning follows [semantic versioning](http://semver.org/) rules.
 - cmsc download
 - mfcds download
 
+### 0.9.0
+
+- tad download
+
 CONTACTS
 ======
 

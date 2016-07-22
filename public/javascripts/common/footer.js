@@ -32,7 +32,7 @@ Footer.prototype.__subscribeDownload = function()
         cmscFile = Parser.runCmsc()
         leftMfcdFile = Parser.runLeftMfcd()
         rightMfcdFile = Parser.runRightMfcd()
-        tadFile = ""
+        tadFile = Parser.runTad()
         iffccFile = ""
 
         if ($("#footer_download-switch .cover").hasClass("right"))

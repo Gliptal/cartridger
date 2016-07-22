@@ -17,18 +17,18 @@ var tad =
             {
             boolean :
                 {
-                left : "on",
+                left  : "on",
                 right : "off"
                 },
-            spi     :
+            spi :
                 {
-                left : "passive",
-                right : "active"
-                },
-            ownship :
-                {
-                left : "all",
+                left  : "all",
                 right : "own"
+                },
+            hook    :
+                {
+                left  : "passive",
+                right : "active"
                 }
             },
         data :
