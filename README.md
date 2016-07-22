@@ -68,6 +68,10 @@ Versioning follows [semantic versioning](http://semver.org/) rules.
 
 - tad download
 
+### 0.10.0
+
+- look and feel
+
 CONTACTS
 ======
 

@@ -40,3 +40,7 @@ Versioning follows [Semantic versioning](http://semver.org/) rules.
 ### 0.9.0
 
 - tad download
+
+### 0.10.0
+
+- look and feel
