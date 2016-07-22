@@ -83,6 +83,11 @@ Versioning follows [semantic versioning](http://semver.org/) rules.
 
 - static files fix
 
+### 1.0.2
+
+- http import fix
+- images links fix
+
 CONTACTS
 ======
 

@@ -55,3 +55,8 @@ Versioning follows [Semantic versioning](http://semver.org/) rules.
 ### 1.0.1
 
 - static files fix
+
+### 1.0.2
+
+- http import fix
+- images links fix
