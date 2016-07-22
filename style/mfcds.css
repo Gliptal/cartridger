@@ -59,7 +59,7 @@
 }
 #mfcds_pages div press#mfcds_pages-remove {
   width: 48px;
-  background-image: url("../../images/remove.png");
+  background-image: url("../images/remove.png");
   background-position: center;
   background-repeat: no-repeat;
   -webkit-background-size: 24px;
