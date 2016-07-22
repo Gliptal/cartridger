@@ -98,7 +98,7 @@ function deliverHtml()
     var render = pug.compileFile("./views/cartridger.pug", {basedir: "./", pretty: true})
     var html = render(content)
 
-    fs.writeFile(destination + "/cartridger.html", html, function(error)
+    fs.writeFile(destination + "/index.html", html, function(error)
         {
         if (error)
             console.log(fail("compile cartridger.html\n" + error))

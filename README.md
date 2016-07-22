@@ -79,10 +79,14 @@ Versioning follows [semantic versioning](http://semver.org/) rules.
 - iffcc download
 - deliver script fix
 
+### 1.0.1
+
+- static files fix
+
 CONTACTS
 ======
 
-- [Mattia Affabris](https://github.com/Gliptal)
+- [Mattia Affabris](https://github.com/Gliptal) - [donate](https://www.paypal.me/Gliptal)
 
 LICENSE
 ======

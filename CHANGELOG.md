@@ -51,3 +51,7 @@ Versioning follows [Semantic versioning](http://semver.org/) rules.
 - iffcc behaviour
 - iffcc download
 - deliver script fix
+
+### 1.0.1
+
+- static files fix
