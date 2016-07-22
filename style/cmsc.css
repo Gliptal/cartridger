@@ -1,0 +1,50 @@
+#cmsc {
+  vertical-align: top;
+}
+#cmsc h1 {
+  display: block;
+  padding: 24px 48px 6px 72px;
+  text-align: center;
+}
+.cmsc_list {
+  height: 204px;
+  width: calc(100% - 48px);
+  margin: 0px 24px;
+  padding: 0px 24px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+.cmsc_program {
+  display: inline-block;
+  height: 180px;
+  width: 204px;
+  margin-right: 48px;
+  white-space: initial;
+}
+.cmsc_list press {
+  position: relative;
+  top: 0px;
+  height: 48px;
+  width: 48px;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 24px;
+  -moz-background-size: 24px;
+  background-size: 24px;
+}
+.cmsc_list press#cmsc_program-add {
+  left: -6px;
+  vertical-align: top;
+  background-image: url("../../images/add.png");
+}
+.cmsc_list press.cmsc_program-remove {
+  left: -6px;
+  margin-bottom: -48px;
+  background-image: url("../../images/remove.png");
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}

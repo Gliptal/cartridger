@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta http-equiv="content-language" content="en">
+    <meta charset="utf8">
+    <meta name="title" content="Cartridger">
+    <meta name="description" content="Generate a custom cartridge for the A-10C in DCS World, using a simple web interface.">
+    <meta name="author" content="Mattia Affabris">
+    <link rel="icon" href="images/favicon.ico">
+    <title>Cartridger</title>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Open+Sans:300,400,700">
+    <link rel="stylesheet" href="/style/common/reset.css">
+    <link rel="stylesheet" href="/style/common/anims.css">
+    <link rel="stylesheet" href="/style/common/press.css">
+    <link rel="stylesheet" href="/style/common/tab.css">
+    <link rel="stylesheet" href="/style/common/switch.css">
+    <link rel="stylesheet" href="/style/common/value.css">
+    <link rel="stylesheet" href="/style/common/background.css">
+    <link rel="stylesheet" href="/style/common/header.css">
+    <link rel="stylesheet" href="/style/common/footer.css">
+    <link rel="stylesheet" href="/style/common/sidebar.css">
+    <link rel="stylesheet" href="/style/cmsc.css">
+    <link rel="stylesheet" href="/style/mfcds.css">
+    <link rel="stylesheet" href="/style/tad.css">
+    <link rel="stylesheet" href="/style/iffcc.css">
+    <link rel="stylesheet" href="/style/cartridger.css">
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.1.min.js" defer></script>
+    <script tpye="text/javascript" src="//cdn.rawgit.com/phstc/jquery-dateFormat/master/dist/jquery-dateFormat.min.js" defer></script>
+    <script tpye="text/javascript" src="http://www.thimbleopensource.com/download/jquery/jquery.filter_input.js" defer></script>
+    <script tpye="text/javascript" src="https://cdn.rawgit.com/Stuk/jszip/master/dist/jszip.min.js" defer></script>
+    <script tpye="text/javascript" src="https://cdn.rawgit.com/eligrey/FileSaver.js/master/FileSaver.min.js" defer></script>
+    <script type="text/javascript" src="/javascripts/common/options.js" defer></script>
+    <script type="text/javascript" src="/javascripts/common/switch.js" defer></script>
+    <script type="text/javascript" src="/javascripts/common/header.js" defer></script>
+    <script type="text/javascript" src="/javascripts/common/footer.js" defer></script>
+    <script type="text/javascript" src="/javascripts/common/sidebar.js" defer></script>
+    <script type="text/javascript" src="/javascripts/cmsc.js" defer></script>
+    <script type="text/javascript" src="/javascripts/mfcds.js" defer></script>
+    <script type="text/javascript" src="/javascripts/tad.js" defer></script>
+    <script type="text/javascript" src="/javascripts/iffcc.js" defer></script>
+    <script type="text/javascript" src="/javascripts/parser.js" defer></script>
+    <script type="text/javascript" src="/javascripts/cartridger.js" defer></script>
+  </head>
+  <body>
+    <div id="background"></div>
+    <header>
+      <tab class="selected" id="header_tab-cmsc">cmsc</tab>
+      <tab class="inactive" id="header_tab-mfcds">mfcds</tab>
+      <tab class="inactive" id="header_tab-tad">tad</tab>
+      <tab class="inactive" id="header_tab-iffcc">iffcc</tab>
+    </header>
+    <div id="content">
+      <div id="cmsc">
+        <h1>default</h1>
+        <div class="cmsc_list" id="cmsc_list-default">
+          <div class="cmsc_program">
+                  <value class="cmsc_program-letter">
+                    <p>program</p>
+                    <input class="regex_AM" value="A" disabled>
+                  </value>
+                  <value class="cmsc_program-chaff">
+                    <p>chaff</p>
+                    <input class="regex_int2" value="1">
+                  </value>
+                  <value class="cmsc_program-flare">
+                    <p>flare</p>
+                    <input class="regex_int2" value="0">
+                  </value>
+                  <value class="cmsc_program-interval">
+                    <p>interval</p>
+                    <input class="regex_float" value="0.5">
+                  </value>
+                  <value class="cmsc_program-repeat">
+                    <p>repeat</p>
+                    <input class="regex_float" value="10">
+                  </value>
+          </div>
+          <div class="cmsc_program">
+                  <value class="cmsc_program-letter">
+                    <p>program</p>
+                    <input class="regex_AM" value="B" disabled>
+                  </value>
+                  <value class="cmsc_program-chaff">
+                    <p>chaff</p>
+                    <input class="regex_int2" value="2">
+                  </value>
+                  <value class="cmsc_program-flare">
+                    <p>flare</p>
+                    <input class="regex_int2" value="0">
+                  </value>
+                  <value class="cmsc_program-interval">
+                    <p>interval</p>
+                    <input class="regex_float" value="0.25">
+                  </value>
+                  <value class="cmsc_program-repeat">
+                    <p>repeat</p>
+                    <input class="regex_float" value="20">
+                  </value>
+          </div>
+          <div class="cmsc_program">
+                  <value class="cmsc_program-letter">
+                    <p>program</p>
+                    <input class="regex_AM" value="C" disabled>
+                  </value>
+                  <value class="cmsc_program-chaff">
+                    <p>chaff</p>
+                    <input class="regex_int2" value="0">
+                  </value>
+                  <value class="cmsc_program-flare">
+                    <p>flare</p>
+                    <input class="regex_int2" value="1">
+                  </value>
+                  <value class="cmsc_program-interval">
+                    <p>interval</p>
+                    <input class="regex_float" value="0.75">
+                  </value>
+                  <value class="cmsc_program-repeat">
+                    <p>repeat</p>
+                    <input class="regex_float" value="4">
+                  </value>
+          </div>
+          <div class="cmsc_program">
+                  <value class="cmsc_program-letter">
+                    <p>program</p>
+                    <input class="regex_AM" value="D" disabled>
+                  </value>
+                  <value class="cmsc_program-chaff">
+                    <p>chaff</p>
+                    <input class="regex_int2" value="0">
+                  </value>
+                  <value class="cmsc_program-flare">
+                    <p>flare</p>
+                    <input class="regex_int2" value="1">
+                  </value>
+                  <value class="cmsc_program-interval">
+                    <p>interval</p>
+                    <input class="regex_float" value="0.25">
+                  </value>
+                  <value class="cmsc_program-repeat">
+                    <p>repeat</p>
+                    <input class="regex_float" value="8">
+                  </value>
+          </div>
+          <div class="cmsc_program">
+                  <value class="cmsc_program-letter">
+                    <p>program</p>
+                    <input class="regex_AM" value="E" disabled>
+                  </value>
+                  <value class="cmsc_program-chaff">
+                    <p>chaff</p>
+                    <input class="regex_int2" value="0">
+                  </value>
+                  <value class="cmsc_program-flare">
+                    <p>flare</p>
+                    <input class="regex_int2" value="1">
+                  </value>
+                  <value class="cmsc_program-interval">
+                    <p>interval</p>
+                    <input class="regex_float" value="3">
+                  </value>
+                  <value class="cmsc_program-repeat">
+                    <p>repeat</p>
+                    <input class="regex_float" value="20">
+                  </value>
+          </div>
+          <div class="cmsc_program">
+                  <value class="cmsc_program-letter">
+                    <p>program</p>
+                    <input class="regex_AM" value="F" disabled>
+                  </value>
+                  <value class="cmsc_program-chaff">
+                    <p>chaff</p>
+                    <input class="regex_int2" value="2">
+                  </value>
+                  <value class="cmsc_program-flare">
+                    <p>flare</p>
+                    <input class="regex_int2" value="1">
+                  </value>
+                  <value class="cmsc_program-interval">
+                    <p>interval</p>
+                    <input class="regex_float" value="0.5">
+                  </value>
+                  <value class="cmsc_program-repeat">
+                    <p>repeat</p>
+                    <input class="regex_float" value="12">
+                  </value>
+          </div>
+          <div class="cmsc_program">
+                  <value class="cmsc_program-letter">
+                    <p>program</p>
+                    <input class="regex_AM" value="G" disabled>
+                  </value>
+                  <value class="cmsc_program-chaff">
+                    <p>chaff</p>
+                    <input class="regex_int2" value="4">
+                  </value>
+                  <value class="cmsc_program-flare">
+                    <p>flare</p>
+                    <input class="regex_int2" value="2">
+                  </value>
+                  <value class="cmsc_program-interval">
+                    <p>interval</p>
+                    <input class="regex_float" value="0.25">
+                  </value>
+                  <value class="cmsc_program-repeat">
+                    <p>repeat</p>
+                    <input class="regex_float" value="12">
+                  </value>
+          </div>
+          <div class="cmsc_program">
+                  <value class="cmsc_program-letter">
+                    <p>program</p>
+                    <input class="regex_AM" value="H" disabled>
+                  </value>
+                  <value class="cmsc_program-chaff">
+                    <p>chaff</p>
+                    <input class="regex_int2" value="1">
+                  </value>
+                  <value class="cmsc_program-flare">
+                    <p>flare</p>
+                    <input class="regex_int2" value="0">
+                  </value>
+                  <value class="cmsc_program-interval">
+                    <p>interval</p>
+                    <input class="regex_float" value="1">
+                  </value>
+                  <value class="cmsc_program-repeat">
+                    <p>repeat</p>
+                    <input class="regex_float" value="1">
+                  </value>
+          </div>
+          <div class="cmsc_program">
+                  <value class="cmsc_program-letter">
+                    <p>program</p>
+                    <input class="regex_AM" value="I" disabled>
+                  </value>
+                  <value class="cmsc_program-chaff">
+                    <p>chaff</p>
+                    <input class="regex_int2" value="2">
+                  </value>
+                  <value class="cmsc_program-flare">
+                    <p>flare</p>
+                    <input class="regex_int2" value="0">
+                  </value>
+                  <value class="cmsc_program-interval">
+                    <p>interval</p>
+                    <input class="regex_float" value="1">
+                  </value>
+                  <value class="cmsc_program-repeat">
+                    <p>repeat</p>
+                    <input class="regex_float" value="1">
+                  </value>
+          </div>
+          <div class="cmsc_program">
+                  <value class="cmsc_program-letter">
+                    <p>program</p>
+                    <input class="regex_AM" value="J" disabled>
+                  </value>
+                  <value class="cmsc_program-chaff">
+                    <p>chaff</p>
+                    <input class="regex_int2" value="0">
+                  </value>
+                  <value class="cmsc_program-flare">
+                    <p>flare</p>
+                    <input class="regex_int2" value="1">
+                  </value>
+                  <value class="cmsc_program-interval">
+                    <p>interval</p>
+                    <input class="regex_float" value="1">
+                  </value>
+                  <value class="cmsc_program-repeat">
+                    <p>repeat</p>
+                    <input class="regex_float" value="1">
+                  </value>
+          </div>
+          <div class="cmsc_program">
+                  <value class="cmsc_program-letter">
+                    <p>program</p>
+                    <input class="regex_AM" value="K" disabled>
+                  </value>
+                  <value class="cmsc_program-chaff">
+                    <p>chaff</p>
+                    <input class="regex_int2" value="0">
+                  </value>
+                  <value class="cmsc_program-flare">
+                    <p>flare</p>
+                    <input class="regex_int2" value="2">
+                  </value>
+                  <value class="cmsc_program-interval">
+                    <p>interval</p>
+                    <input class="regex_float" value="1">
+                  </value>
+                  <value class="cmsc_program-repeat">
+                    <p>repeat</p>
+                    <input class="regex_float" value="1">
+                  </value>
+          </div>
+          <div class="cmsc_program">
+                  <value class="cmsc_program-letter">
+                    <p>program</p>
+                    <input class="regex_AM" value="L" disabled>
+                  </value>
+                  <value class="cmsc_program-chaff">
+                    <p>chaff</p>
+                    <input class="regex_int2" value="1">
+                  </value>
+                  <value class="cmsc_program-flare">
+                    <p>flare</p>
+                    <input class="regex_int2" value="0">
+                  </value>
+                  <value class="cmsc_program-interval">
+                    <p>interval</p>
+                    <input class="regex_float" value="0.5">
+                  </value>
+                  <value class="cmsc_program-repeat">
+                    <p>repeat</p>
+                    <input class="regex_float" value="12">
+                  </value>
+          </div>
+          <div class="cmsc_program">
+                  <value class="cmsc_program-letter">
+                    <p>program</p>
+                    <input class="regex_AM" value="M" disabled>
+                  </value>
+                  <value class="cmsc_program-chaff">
+                    <p>chaff</p>
+                    <input class="regex_int2" value="0">
+                  </value>
+                  <value class="cmsc_program-flare">
+                    <p>flare</p>
+                    <input class="regex_int2" value="1">
+                  </value>
+                  <value class="cmsc_program-interval">
+                    <p>interval</p>
+                    <input class="regex_float" value="0.5">
+                  </value>
+                  <value class="cmsc_program-repeat">
+                    <p>repeat</p>
+                    <input class="regex_float" value="12">
+                  </value>
+          </div>
+        </div>
+        <h1>custom</h1>
+        <div class="cmsc_list" id="cmsc_list-custom">
+          <press class="interactable" id="cmsc_program-add"></press>
+        </div>
+      </div>
+      <div id="mfcds">
+        <div class="mfcds_links" id="mfcds_links-left">
+          <h1>left</h1>
+          <div>
+            <press class="interactable">STAT</press>
+            <press class="interactable">TGP</press>
+            <press class="interactable">DSMS</press>
+            <press class="interactable">TAD</press>
+          </div>
+        </div>
+        <div class="mfcds_links" id="mfcds_links-right">
+          <h1>right</h1>
+          <div>
+            <press class="interactable">MSG</press>
+            <press class="interactable">CDU</press>
+            <press class="interactable">MAV</press>
+            <press class="interactable">TGP</press>
+          </div>
+        </div>
+        <div id="mfcds_pages">
+          <div>
+            <press>STAT</press>
+            <press>LOAD</press>
+            <press>MAV</press>
+            <press>CDU</press>
+          </div>
+          <div>
+            <press>MSG</press>
+            <press>DSMS</press>
+            <press>TGP</press>
+            <press>TAD</press>
+          </div>
+          <div>
+            <press id="mfcds_pages-remove"></press>
+          </div>
+        </div>
+      </div>
+      <div id="tad">
+        <div class="tad_profile">
+                <value>
+                  <p></p>
+                  <input class="regex_AZ4" value="ALL">
+                </value>
+          <div class="tad_switch-bullseye">
+            <p>bullseye</p>
+                  <switch id="">
+                    <div class="cover interactable right"></div>
+                    <div class="side">on</div>
+                    <div class="side">off</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-rings">
+            <p>range rings</p>
+                  <switch id="">
+                    <div class="cover interactable right"></div>
+                    <div class="side">on</div>
+                    <div class="side">off</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-flightPlan">
+            <p>flight plan</p>
+                  <switch id="">
+                    <div class="cover interactable right"></div>
+                    <div class="side">on</div>
+                    <div class="side">off</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-waypoints">
+            <p>waypoints</p>
+                  <switch id="">
+                    <div class="cover interactable right"></div>
+                    <div class="side">on</div>
+                    <div class="side">off</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-hook">
+            <p>hook</p>
+                  <switch id="">
+                    <div class="cover interactable right"></div>
+                    <div class="side">on</div>
+                    <div class="side">off</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-hook-type">
+            <p>hook type</p>
+                  <switch id="">
+                    <div class="cover interactable right"></div>
+                    <div class="side">passive</div>
+                    <div class="side">active</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-ownship">
+            <p>ownship</p>
+                  <switch id="">
+                    <div class="cover interactable right"></div>
+                    <div class="side">on</div>
+                    <div class="side">off</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-spi">
+            <p>spi</p>
+                  <switch id="">
+                    <div class="cover interactable right"></div>
+                    <div class="side">all</div>
+                    <div class="side">own</div>
+                  </switch>
+          </div>
+        </div>
+        <div class="tad_profile">
+                <value>
+                  <p></p>
+                  <input class="regex_AZ4" value="LOFF">
+                </value>
+          <div class="tad_switch-bullseye">
+            <p>bullseye</p>
+                  <switch id="">
+                    <div class="cover interactable right"></div>
+                    <div class="side">on</div>
+                    <div class="side">off</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-rings">
+            <p>range rings</p>
+                  <switch id="">
+                    <div class="cover interactable right"></div>
+                    <div class="side">on</div>
+                    <div class="side">off</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-flightPlan">
+            <p>flight plan</p>
+                  <switch id="">
+                    <div class="cover interactable left"></div>
+                    <div class="side">on</div>
+                    <div class="side">off</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-waypoints">
+            <p>waypoints</p>
+                  <switch id="">
+                    <div class="cover interactable right"></div>
+                    <div class="side">on</div>
+                    <div class="side">off</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-hook">
+            <p>hook</p>
+                  <switch id="">
+                    <div class="cover interactable right"></div>
+                    <div class="side">on</div>
+                    <div class="side">off</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-hook-type">
+            <p>hook type</p>
+                  <switch id="">
+                    <div class="cover interactable right"></div>
+                    <div class="side">passive</div>
+                    <div class="side">active</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-ownship">
+            <p>ownship</p>
+                  <switch id="">
+                    <div class="cover interactable right"></div>
+                    <div class="side">on</div>
+                    <div class="side">off</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-spi">
+            <p>spi</p>
+                  <switch id="">
+                    <div class="cover interactable right"></div>
+                    <div class="side">all</div>
+                    <div class="side">own</div>
+                  </switch>
+          </div>
+        </div>
+        <div class="tad_profile">
+                <value>
+                  <p></p>
+                  <input class="regex_AZ4" value="ACT">
+                </value>
+          <div class="tad_switch-bullseye">
+            <p>bullseye</p>
+                  <switch id="">
+                    <div class="cover interactable right"></div>
+                    <div class="side">on</div>
+                    <div class="side">off</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-rings">
+            <p>range rings</p>
+                  <switch id="">
+                    <div class="cover interactable right"></div>
+                    <div class="side">on</div>
+                    <div class="side">off</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-flightPlan">
+            <p>flight plan</p>
+                  <switch id="">
+                    <div class="cover interactable right"></div>
+                    <div class="side">on</div>
+                    <div class="side">off</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-waypoints">
+            <p>waypoints</p>
+                  <switch id="">
+                    <div class="cover interactable right"></div>
+                    <div class="side">on</div>
+                    <div class="side">off</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-hook">
+            <p>hook</p>
+                  <switch id="">
+                    <div class="cover interactable right"></div>
+                    <div class="side">on</div>
+                    <div class="side">off</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-hook-type">
+            <p>hook type</p>
+                  <switch id="">
+                    <div class="cover interactable left"></div>
+                    <div class="side">passive</div>
+                    <div class="side">active</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-ownship">
+            <p>ownship</p>
+                  <switch id="">
+                    <div class="cover interactable right"></div>
+                    <div class="side">on</div>
+                    <div class="side">off</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-spi">
+            <p>spi</p>
+                  <switch id="">
+                    <div class="cover interactable right"></div>
+                    <div class="side">all</div>
+                    <div class="side">own</div>
+                  </switch>
+          </div>
+        </div>
+        <div class="tad_profile">
+                <value>
+                  <p></p>
+                  <input class="regex_AZ4" value="NONE">
+                </value>
+          <div class="tad_switch-bullseye">
+            <p>bullseye</p>
+                  <switch id="">
+                    <div class="cover interactable left"></div>
+                    <div class="side">on</div>
+                    <div class="side">off</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-rings">
+            <p>range rings</p>
+                  <switch id="">
+                    <div class="cover interactable left"></div>
+                    <div class="side">on</div>
+                    <div class="side">off</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-flightPlan">
+            <p>flight plan</p>
+                  <switch id="">
+                    <div class="cover interactable left"></div>
+                    <div class="side">on</div>
+                    <div class="side">off</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-waypoints">
+            <p>waypoints</p>
+                  <switch id="">
+                    <div class="cover interactable left"></div>
+                    <div class="side">on</div>
+                    <div class="side">off</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-hook">
+            <p>hook</p>
+                  <switch id="">
+                    <div class="cover interactable left"></div>
+                    <div class="side">on</div>
+                    <div class="side">off</div>
+                  </switch>
+          </div>
+          <div class="inactive tad_switch-hook-type">
+            <p>hook type</p>
+                  <switch id="">
+                    <div class="cover interactable right"></div>
+                    <div class="side">passive</div>
+                    <div class="side">active</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-ownship">
+            <p>ownship</p>
+                  <switch id="">
+                    <div class="cover interactable left"></div>
+                    <div class="side">on</div>
+                    <div class="side">off</div>
+                  </switch>
+          </div>
+          <div class="tad_switch-spi">
+            <p>spi</p>
+                  <switch id="">
+                    <div class="cover interactable left"></div>
+                    <div class="side">all</div>
+                    <div class="side">own</div>
+                  </switch>
+          </div>
+        </div>
+      </div>
+      <div id="iffcc">
+        <div id="iffcc_list">
+          <div class="iffcc_profile">
+                  <value class="iffcc_program-name">
+                    <p>name</p>
+                    <input class="regex_9" value="A-10">
+                  </value>
+                  <value class="iffcc_program-wingspan">
+                    <p>wingspan</p>
+                    <input class="regex_int2" value="57">
+                  </value>
+                  <value class="iffcc_program-length">
+                    <p>length</p>
+                    <input class="regex_int2" value="54">
+                  </value>
+                  <value class="iffcc_program-speed">
+                    <p>speed</p>
+                    <input class="regex_int3" value="310">
+                  </value>
+                  <switch id="iffcc_program-selected">
+                    <div class="cover interactable right"></div>
+                    <div class="side">active</div>
+                    <div class="side">inactive</div>
+                  </switch>
+          </div>
+          <div class="iffcc_profile">
+                  <value class="iffcc_program-name">
+                    <p>name</p>
+                    <input class="regex_9" value="F-15">
+                  </value>
+                  <value class="iffcc_program-wingspan">
+                    <p>wingspan</p>
+                    <input class="regex_int2" value="43">
+                  </value>
+                  <value class="iffcc_program-length">
+                    <p>length</p>
+                    <input class="regex_int2" value="64">
+                  </value>
+                  <value class="iffcc_program-speed">
+                    <p>speed</p>
+                    <input class="regex_int3" value="370">
+                  </value>
+                  <switch id="iffcc_program-selected">
+                    <div class="cover interactable right"></div>
+                    <div class="side">active</div>
+                    <div class="side">inactive</div>
+                  </switch>
+          </div>
+          <div class="iffcc_profile">
+                  <value class="iffcc_program-name">
+                    <p>name</p>
+                    <input class="regex_9" value="F-16">
+                  </value>
+                  <value class="iffcc_program-wingspan">
+                    <p>wingspan</p>
+                    <input class="regex_int2" value="33">
+                  </value>
+                  <value class="iffcc_program-length">
+                    <p>length</p>
+                    <input class="regex_int2" value="47">
+                  </value>
+                  <value class="iffcc_program-speed">
+                    <p>speed</p>
+                    <input class="regex_int3" value="400">
+                  </value>
+                  <switch id="iffcc_program-selected">
+                    <div class="cover interactable left"></div>
+                    <div class="side">active</div>
+                    <div class="side">inactive</div>
+                  </switch>
+          </div>
+          <div class="iffcc_profile">
+                  <value class="iffcc_program-name">
+                    <p>name</p>
+                    <input class="regex_9" value="F-18">
+                  </value>
+                  <value class="iffcc_program-wingspan">
+                    <p>wingspan</p>
+                    <input class="regex_int2" value="37">
+                  </value>
+                  <value class="iffcc_program-length">
+                    <p>length</p>
+                    <input class="regex_int2" value="56">
+                  </value>
+                  <value class="iffcc_program-speed">
+                    <p>speed</p>
+                    <input class="regex_int3" value="320">
+                  </value>
+                  <switch id="iffcc_program-selected">
+                    <div class="cover interactable left"></div>
+                    <div class="side">active</div>
+                    <div class="side">inactive</div>
+                  </switch>
+          </div>
+          <div class="iffcc_profile">
+                  <value class="iffcc_program-name">
+                    <p>name</p>
+                    <input class="regex_9" value="MIG-29">
+                  </value>
+                  <value class="iffcc_program-wingspan">
+                    <p>wingspan</p>
+                    <input class="regex_int2" value="37">
+                  </value>
+                  <value class="iffcc_program-length">
+                    <p>length</p>
+                    <input class="regex_int2" value="57">
+                  </value>
+                  <value class="iffcc_program-speed">
+                    <p>speed</p>
+                    <input class="regex_int3" value="320">
+                  </value>
+                  <switch id="iffcc_program-selected">
+                    <div class="cover interactable left"></div>
+                    <div class="side">active</div>
+                    <div class="side">inactive</div>
+                  </switch>
+          </div>
+          <div class="iffcc_profile">
+                  <value class="iffcc_program-name">
+                    <p>name</p>
+                    <input class="regex_9" value="SU-27">
+                  </value>
+                  <value class="iffcc_program-wingspan">
+                    <p>wingspan</p>
+                    <input class="regex_int2" value="48">
+                  </value>
+                  <value class="iffcc_program-length">
+                    <p>length</p>
+                    <input class="regex_int2" value="72">
+                  </value>
+                  <value class="iffcc_program-speed">
+                    <p>speed</p>
+                    <input class="regex_int3" value="330">
+                  </value>
+                  <switch id="iffcc_program-selected">
+                    <div class="cover interactable left"></div>
+                    <div class="side">active</div>
+                    <div class="side">inactive</div>
+                  </switch>
+          </div>
+          <div class="iffcc_profile">
+                  <value class="iffcc_program-name">
+                    <p>name</p>
+                    <input class="regex_9" value="SU-25">
+                  </value>
+                  <value class="iffcc_program-wingspan">
+                    <p>wingspan</p>
+                    <input class="regex_int2" value="46">
+                  </value>
+                  <value class="iffcc_program-length">
+                    <p>length</p>
+                    <input class="regex_int2" value="44">
+                  </value>
+                  <value class="iffcc_program-speed">
+                    <p>speed</p>
+                    <input class="regex_int3" value="390">
+                  </value>
+                  <switch id="iffcc_program-selected">
+                    <div class="cover interactable right"></div>
+                    <div class="side">active</div>
+                    <div class="side">inactive</div>
+                  </switch>
+          </div>
+          <div class="iffcc_profile">
+                  <value class="iffcc_program-name">
+                    <p>name</p>
+                    <input class="regex_9" value="AH-64">
+                  </value>
+                  <value class="iffcc_program-wingspan">
+                    <p>wingspan</p>
+                    <input class="regex_int2" value="49">
+                  </value>
+                  <value class="iffcc_program-length">
+                    <p>length</p>
+                    <input class="regex_int2" value="49">
+                  </value>
+                  <value class="iffcc_program-speed">
+                    <p>speed</p>
+                    <input class="regex_int3" value="150">
+                  </value>
+                  <switch id="iffcc_program-selected">
+                    <div class="cover interactable right"></div>
+                    <div class="side">active</div>
+                    <div class="side">inactive</div>
+                  </switch>
+          </div>
+          <div class="iffcc_profile">
+                  <value class="iffcc_program-name">
+                    <p>name</p>
+                    <input class="regex_9" value="UH-60">
+                  </value>
+                  <value class="iffcc_program-wingspan">
+                    <p>wingspan</p>
+                    <input class="regex_int2" value="53">
+                  </value>
+                  <value class="iffcc_program-length">
+                    <p>length</p>
+                    <input class="regex_int2" value="49">
+                  </value>
+                  <value class="iffcc_program-speed">
+                    <p>speed</p>
+                    <input class="regex_int3" value="150">
+                  </value>
+                  <switch id="iffcc_program-selected">
+                    <div class="cover interactable left"></div>
+                    <div class="side">active</div>
+                    <div class="side">inactive</div>
+                  </switch>
+          </div>
+          <div class="iffcc_profile">
+                  <value class="iffcc_program-name">
+                    <p>name</p>
+                    <input class="regex_9" value="MI-8 HIP">
+                  </value>
+                  <value class="iffcc_program-wingspan">
+                    <p>wingspan</p>
+                    <input class="regex_int2" value="70">
+                  </value>
+                  <value class="iffcc_program-length">
+                    <p>length</p>
+                    <input class="regex_int2" value="60">
+                  </value>
+                  <value class="iffcc_program-speed">
+                    <p>speed</p>
+                    <input class="regex_int3" value="140">
+                  </value>
+                  <switch id="iffcc_program-selected">
+                    <div class="cover interactable left"></div>
+                    <div class="side">active</div>
+                    <div class="side">inactive</div>
+                  </switch>
+          </div>
+        </div>
+      </div>
+    </div>
+    <sidebar class="interactable"></sidebar>
+    <footer>
+      <div id="footer_meta">
+        <h6><a href="" target="_blank">issues and feedback</a> - <a href="http://forums.eagle.ru/showthread.php?t=98607" target="_blank">jsgme</a> - <a href="https://www.paypal.me/Gliptal" target="_blank">donate</a></h6>
+        <h6><a href="https://github.com/Gliptal/cartridger" target="_blank">version</a> </h6>
+        <h6>coded by <a href="mailto:affa@outlook.it">Mattia Affabris</a> with <a href="http://www.sublimetext.com/3" target="_blank">Sublime Text 3</a></h6>
+      </div>
+      <div class="hidden" id="footer_download">
+            <switch id="footer_download-switch">
+              <div class="cover interactable right"></div>
+              <div class="side">jsgme</div>
+              <div class="side">direct</div>
+            </switch>
+        <press class="interactable" id="footer_download-button"></press>
+      </div>
+    </footer>
+  </body>
+</html>

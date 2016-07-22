@@ -1,0 +1,44 @@
+@-moz-keyframes pulse {
+  0% {
+    background-color: #555;
+  }
+  50% {
+    background-color: #6a8d9d;
+  }
+  100% {
+    background-color: #555;
+  }
+}
+@-webkit-keyframes pulse {
+  0% {
+    background-color: #555;
+  }
+  50% {
+    background-color: #6a8d9d;
+  }
+  100% {
+    background-color: #555;
+  }
+}
+@-o-keyframes pulse {
+  0% {
+    background-color: #555;
+  }
+  50% {
+    background-color: #6a8d9d;
+  }
+  100% {
+    background-color: #555;
+  }
+}
+@keyframes pulse {
+  0% {
+    background-color: #555;
+  }
+  50% {
+    background-color: #6a8d9d;
+  }
+  100% {
+    background-color: #555;
+  }
+}

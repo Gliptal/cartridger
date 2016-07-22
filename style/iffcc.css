@@ -1,0 +1,42 @@
+#iffcc {
+  vertical-align: top;
+}
+#iffcc_list {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: box;
+  display: flex;
+  -webkit-box-lines: multiple;
+  -moz-box-lines: multiple;
+  -o-box-lines: multiple;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  height: 204px;
+  width: calc(100% - 48px);
+  margin: 0px 24px;
+  padding: 0px 24px;
+}
+.iffcc_profile {
+  -webkit-flex-basis: auto;
+  flex-basis: auto;
+  margin: auto;
+  display: inline-block;
+  height: 180px;
+  width: 204px;
+  margin: 48px 36px 0px 0px;
+  text-align: center;
+  white-space: initial;
+}
+.iffcc_profile p {
+  width: 96px;
+}
+.iffcc_profile input {
+  width: 96px;
+}
+.iffcc_profile switch {
+  float: right;
+  margin-top: 12px;
+}

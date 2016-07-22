@@ -1,0 +1,20 @@
+press {
+  display: inline-block;
+  height: 48px;
+  width: 120px;
+  line-height: 48px;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  background-color: #555;
+  -webkit-transition: background-color 0.3s;
+  -moz-transition: background-color 0.3s;
+  -o-transition: background-color 0.3s;
+  -ms-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+  pointer-events: none;
+}
+press.selected {
+  background-color: #466675;
+}

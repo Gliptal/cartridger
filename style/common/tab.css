@@ -1,0 +1,28 @@
+tab {
+  display: inline-block;
+  height: 48px;
+  line-height: 45px;
+  border-bottom: 3px solid #555;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: border-color 0.3s;
+  -moz-transition: border-color 0.3s;
+  -o-transition: border-color 0.3s;
+  -ms-transition: border-color 0.3s;
+  transition: border-color 0.3s;
+}
+tab:hover {
+  border-color: #466675;
+}
+tab.selected {
+  border-color: #6a8d9d;
+  cursor: default;
+}
+tab.inactive {
+  border-color: transparent;
+  cursor: default;
+  pointer-events: none;
+}

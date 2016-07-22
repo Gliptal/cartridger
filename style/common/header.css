@@ -1,0 +1,16 @@
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 48px;
+  width: 100%;
+  text-align: center;
+}
+header tab {
+  width: 24%;
+  margin-right: 0.8%;
+}
+header tab:nth-of-type(1) {
+  margin-left: 0.8%;
+}

@@ -1,0 +1,14 @@
+sidebar {
+  position: absolute;
+  top: 48px;
+  right: 0;
+  height: calc(100% - 168px);
+  width: 60px;
+  margin: 24px 0px 24px 12px;
+  background-image: url("../../images/next.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 60px;
+  -moz-background-size: 60px;
+  background-size: 60px;
+}

@@ -1,0 +1,33 @@
+value {
+  display: inline-block;
+  height: 30px;
+  width: 204px;
+  margin-bottom: 6px;
+}
+value > * {
+  display: inline-block;
+  vertical-align: top;
+  height: 100%;
+}
+value p {
+  width: 144px;
+  line-height: 30px;
+  padding-right: 24px;
+  text-align: right;
+}
+value input {
+  width: 60px;
+  border: 0px;
+  padding: 0px 6px;
+  border-bottom: 2px solid #6a8d9d;
+  font-size: 18px;
+  text-align: center;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: #fff;
+  background-color: transparent;
+  cursor: auto;
+}
+value input:disabled {
+  border-bottom: 0px;
+}

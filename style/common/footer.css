@@ -1,0 +1,43 @@
+footer {
+  position: relative;
+  z-index: 1;
+  height: 72px;
+  width: 100%;
+  padding: 12px;
+}
+#footer_meta {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+#footer_meta h6 {
+  margin-left: 12px;
+  color: #c5c4c4;
+}
+#footer_meta h6:last-child {
+  margin-bottom: 6px;
+}
+#footer_download {
+  float: right;
+  width: 264px;
+  margin-right: 10%;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  -o-transition: all 0.3s;
+  -ms-transition: all 0.3s;
+  transition: all 0.3s;
+}
+#footer_download-switch {
+  position: relative;
+  margin: 12px 24px 12px 0px;
+}
+#footer_download-button {
+  position: relative;
+  float: right;
+  background-image: url("../../images/download.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-background-size: 48px;
+  -moz-background-size: 48px;
+  background-size: 48px;
+}
