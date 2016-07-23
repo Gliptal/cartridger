@@ -1,6 +1,6 @@
 {
   "name": "cartridger",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Custom cartridge generator for DCS World A-10C.",
   "main": "cartridger.js",
   "dependencies": {

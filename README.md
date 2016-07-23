@@ -97,6 +97,11 @@ Versioning follows [semantic versioning](http://semver.org/) rules.
 - image link fix
 - uppercase iffcc fix
 
+### 1.0.5
+
+- image link fix
+- cmsc filter fix
+
 CONTACTS
 ======
 
