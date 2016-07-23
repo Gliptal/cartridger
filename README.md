@@ -92,6 +92,11 @@ Versioning follows [semantic versioning](http://semver.org/) rules.
 
 - custom plugin serving
 
+### 1.0.4
+
+- image link fix
+- uppercase iffcc fix
+
 CONTACTS
 ======
 

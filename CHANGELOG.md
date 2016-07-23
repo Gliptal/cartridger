@@ -64,3 +64,8 @@ Versioning follows [Semantic versioning](http://semver.org/) rules.
 ### 1.0.3
 
 - custom plugin serving
+
+### 1.0.4
+
+- image link fix
+- uppercase iffcc fix
