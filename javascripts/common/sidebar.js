@@ -25,7 +25,7 @@ Sidebar.prototype.__subscribeSidebar = function()
             Header.selectTab(Sidebar.stage)
 
             if (Sidebar.stage == 4)
-                sidebar.css("background-image", "url(\"../images/end.png\"")
+                sidebar.css("background-image", "url(\"./images/end.png\"")
             }
         })
     }
