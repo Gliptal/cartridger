@@ -88,6 +88,10 @@ Versioning follows [semantic versioning](http://semver.org/) rules.
 - http import fix
 - images links fix
 
+### 1.0.3
+
+- custom plugin serving
+
 CONTACTS
 ======
 

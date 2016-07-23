@@ -4,4 +4,4 @@ npm-debug.log
 
 # static files
 STATIC
-public/style/**
+public/style
